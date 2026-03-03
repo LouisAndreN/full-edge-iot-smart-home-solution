@@ -1,6 +1,10 @@
 # full-edge-iot-smart-home-solution
 
 # Network Architecture 
+
+<img width="435" height="746" alt="image" src="https://github.com/user-attachments/assets/6708e7f4-691c-45fc-964e-02f8eb8a8d8b" />
+
+
 +-------------------------------------------+
 |          Internet Gateway (WAN)           |
 |             (Ton FAI / Routeur TP-Link)   |
