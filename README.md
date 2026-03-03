@@ -1,0 +1,1 @@
+# full-edge-iot-smart-home-solution
