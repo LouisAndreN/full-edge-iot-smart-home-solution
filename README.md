@@ -16,7 +16,7 @@
 +──────────────────────────────▼──────────────────────────────────────+
 │                                                                     │
 │   ┌─ VPC ────────────────────────────────────────────────────────┐  │
-│   │              Raspberry Pi 5 — Ubuntu Server 24.04            │  │
+│   │              Raspberry Pi 5 — Ubuntu Server 24.04.3          │  │
 │   │         NVMe 1TB | LUKS2+LVM | Hailo-8L Edge AI              │  │
 │   │                                                              │  │
 │   │  ┌─ Public Subnet ──────────┐  ┌─ Private Subnet (IoT) ───┐  │  │
