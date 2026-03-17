@@ -10,3 +10,11 @@
 | TP-Link（eth0） | PC | Pi | `ssh <user>@192.168.0.151` | ✅ OK |
 | TP-Link（eth0） | PC | IoTサブネット | `ping 192.168.200.1` | ❌ timeout |
 | Pi上で実行 | Pi | - | `systemctl status hostapd` | ✅ EAPOL-4WAY-HS-COMPLETED |
+
+| テスト | 場所 | コマンド | 期待される結果 |
+|--------|------|---------|---------------|
+| Unbound動作確認 | Pi上 | `dig google.com @127.0.0.1 -p 5335` | ✅ NOERROR |
+| dnsmasq転送確認 | Pi上 | `dig google.com @192.168.200.1` | ✅ NOERROR |
+| DNS漏洩なし | Pi上 | `ss -tulpn \| grep :53` | 0.0.0.0:53なし ✅ |
+| センサーのDNS解決 | Pi-IoTクライアント | `nslookup google.com` | ✅ 解決成功 |
+| インターネット接続 | Pi-IoTクライアント | `ping google.com` / `curl.exe -s https://ifconfig.me` | ✅ 応答あり |
