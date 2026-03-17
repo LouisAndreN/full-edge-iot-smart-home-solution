@@ -79,28 +79,48 @@ This project reproduces a production-grade cloud architecture locally on a singl
 ## Repository Structure
 
 ```
-homepi/
+full-edge-iot-smart-home-solution/
 ├── README.md
+├── LICENSE
+│
 ├── 01-storage/
-│   ├── README.md               ← Qiita article link
-│   ├── setup_commands.sh       ← NVMe setup script
-│   ├── verify-boot.sh          ← Post-boot validation
-│   └── partition-layout.md     ← Partition table
+│   ├── README.md                        ← lien article Qiita #0
+│   ├── configs/
+│   │   ├── etc/
+│   │   └── mnt/
+│   ├── partitionning_architecture.txt
+│   ├── setup_commands.sh                ← script NVMe setup
+│   └── verify-boot.sh                   ← validation post-boot
+│
 ├── 02-network/
-│   ├── README.md               ← Qiita articles 1+2+3 links
-│   ├── hostapd.conf
-│   ├── nftables.conf
-│   ├── dnsmasq.conf
+│   ├── README.md                        ← liens articles Qiita #1 #2 #3
+│   ├── hostapd/
+│   │   ├── hostapd.conf
+│   │   └── override.conf                ← systemd override
+│   ├── nftables/
+│   │   └── nftables.conf
+│   ├── dnsmasq/
+│   │   ├── dnsmasq.conf
+│   │   └── override.conf                ← systemd override
 │   ├── unbound/
 │   │   └── pi-iot.conf
-│   └── systemd/
-│       ├── hostapd-override.conf
-│       └── dnsmasq-override.conf
-├── 03-security/                ← CrowdSec, Authelia, mTLS
-├── 04-observability/           ← Grafana, InfluxDB
-├── 05-iot/                     ← MQTT, ESP32 firmware
-│   └── nilm/                   ← EMS/NILM module
-└── 06-auth/                    ← Microsoft Authenticator SSO
+│   └── netplan/
+│       └── 10-network.yaml
+│
+├── 03-security/                         ← CrowdSec, Authelia, mTLS
+│   └── README.md
+│
+├── 04-observability/                    ← Grafana, InfluxDB, Prometheus, Loki
+│   └── README.md
+│
+├── 05-iot/                              ← MQTT, ESP32 firmware
+│   ├── README.md
+│   ├── mqtt/
+│   ├── esp32/
+│   └── nilm/                            ← EMS/NILM module
+│
+└── 06-auth/                             ← Authelia SSO, Microsoft Authenticator
+    └── README.md
 ```
 
 ---
