@@ -187,6 +187,3 @@ See [`02-network/README.md`](02-network/README.md) for network configuration.
 
 > ⚠️ Replace all placeholders (`<passphrase>`, `<wt0_ip>`, `<interface>`) with your own values before use.
 
----
-
-*Built on Raspberry Pi 5 — Suwa, Japan 🇯🇵*
