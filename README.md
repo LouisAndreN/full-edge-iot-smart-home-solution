@@ -158,10 +158,10 @@ homepi/
 
 | # | Title | Status |
 |---|---|---|
-| 0 | [Raspberry Pi 5 + NVMeで最強セキュリティEdge・IoTサーバー構築ガイド（LUKS2暗号化 + Argon2id + LVM + Btrfs + ヘッドレスブート対応）](https://qiita.com/LouisAndreN/items/1ace35f6a9e915686fe4) | ✅ Published |
+| 0 | [Pi5 NVMe暗号化セットアップ（LUKS2暗号化 + Argon2id + LVM + Btrfs + ヘッドレスブート対応）](https://qiita.com/LouisAndreN/items/1ace35f6a9e915686fe4) | ✅ Published |
 | 1 | Raspberry Pi 5でIoT専用の隔離ネットワークを構築する（hostapd + nftables） | ✅ Published |
-| 2 | Raspberry Pi 5 IoT隔離ネットワーク — ローカルDNSリゾルバでDNS漏洩を防ぐ（Unbound + dnsmasq） | ✅ Published |
-| 3 | Raspberry Pi 5 IoT隔離ネットワーク — Zero-TrustリモートアクセスVPN（NetBird + SSH） | ✅ Published |
+| 2 | ローカルDNSリゾルバでDNS漏洩を防ぐ（Unbound + dnsmasq） | ✅ Published |
+| 3 | Zero-TrustリモートアクセスVPN（NetBird + SSH） | ✅ Published |
 | 4 | セキュリティ強化（CrowdSec + Authelia） | 🔄 Planned |
 | 5 | 観測性（Grafana + InfluxDB） | 🔄 Planned |
 | 6 | IoTセンサー統合（ESP32 + MQTT） | 🔄 Planned |
