@@ -1,0 +1,2 @@
+cryptdata UUID=$(sudo blkid -s UUID -o value /dev/nvme0n1p5) /boot/luks-keyfile luks,discard
+swap /dev/nvme0n1p3 /dev/urandom swap,cipher=aes-xts-plain64,size=512,sector-size=4096
