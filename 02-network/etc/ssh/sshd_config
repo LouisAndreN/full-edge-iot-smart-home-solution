@@ -1,0 +1,8 @@
+# NetBird IP（Zero-Trust VPN経由の安全なアクセス）
+ListenAddress <wt0_ip>
+
+# LAN eth0 IP（VPNなしのローカルアクセス用）
+ListenAddress 192.168.0.151
+
+# パスワード認証を無効化（SSHキーのみ）
+PasswordAuthentication no
