@@ -1,6 +1,6 @@
-# homepi — Raspberry Pi 5 Edge IoT Gateway
+# Raspberry Pi 5 Edge IoT Gateway Smart Home Full Solution
 
-> Full-stack edge IoT platform built on a Raspberry Pi 5 — encrypted NVMe, isolated IoT network, local DNS, Zero-Trust VPN, AI inference, and smart home services.
+> Full-stack edge IoT platform built on a Raspberry Pi 5 — encrypted NVMe, isolated IoT network, local DNS, Zero-Trust VPN, ML inference, and smart home services.
 
 ---
 
