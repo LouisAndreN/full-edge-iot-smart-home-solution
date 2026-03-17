@@ -1,0 +1,3 @@
+#!/bin/bash
+btrfs scrub start /mnt/data
+btrfs balance start -dusage=85 /mnt/data
