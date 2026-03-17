@@ -71,7 +71,7 @@ Raspberry Pi 5
 | Zero-Trust VPN | NetBird (WireGuard) | ✅ Done |
 | Security | CrowdSec + Authelia + mTLS | 🔄 Planned |
 | SSO | Microsoft Authenticator | 🔄 Planned |
-| Observability | Grafana + InfluxDB | 🔄 Planned |
+| Observability | Grafana + InfluxDB + Prometheus + Loki | 🔄 Planned |
 | IoT messaging | MQTT (Mosquitto) | 🔄 Planned |
 | AI inference | Hailo8L (Edge ML) | 🔄 Planned |
 | Smart home | Home Assistant | 🔄 Planned |
@@ -163,7 +163,7 @@ homepi/
 | 2 | ローカルDNSリゾルバでDNS漏洩を防ぐ（Unbound + dnsmasq） | ✅ Published |
 | 3 | Zero-TrustリモートアクセスVPN（NetBird + SSH） | ✅ Published |
 | 4 | セキュリティ強化（CrowdSec + Authelia） | 🔄 Planned |
-| 5 | 観測性（Grafana + InfluxDB） | 🔄 Planned |
+| 5 | 観測性（Grafana + InfluxDB + Prometheus + Loki） | 🔄 Planned |
 | 6 | IoTセンサー統合（ESP32 + MQTT） | 🔄 Planned |
 | 7 | EMS/NILMモジュール | 🔄 Planned |
 
