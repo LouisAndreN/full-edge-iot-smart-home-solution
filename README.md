@@ -159,7 +159,7 @@ full-edge-iot-smart-home-solution/
 | # | Title | Status |
 |---|---|---|
 | 0 | [Pi5 NVMe暗号化セットアップ（LUKS2暗号化 + Argon2id + LVM + Btrfs + ヘッドレスブート対応）](https://qiita.com/LouisAndreN/items/1ace35f6a9e915686fe4) | ✅ Published |
-| 1 | Raspberry Pi 5でIoT専用の隔離ネットワークを構築する（hostapd + nftables） | ✅ Published |
+| 1 | IoT隔離ネットワーク（hostapd + nftables） | ✅ Published |
 | 2 | ローカルDNSリゾルバでDNS漏洩を防ぐ（Unbound + dnsmasq） | ✅ Published |
 | 3 | Zero-TrustリモートアクセスVPN（NetBird + SSH） | ✅ Published |
 | 4 | セキュリティ強化（CrowdSec + Authelia） | 🔄 Planned |
