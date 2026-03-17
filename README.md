@@ -31,27 +31,6 @@ This project reproduces a production-grade cloud architecture locally on a singl
 
 <img width="1107" height="596" alt="image" src="https://github.com/user-attachments/assets/db6cee4e-4a4d-498c-bedc-9c5eb0267b8d" />
 
-```
-Internet
-    │
-    ▼
-TP-Link Router (192.168.0.1)
-    │ eth0 — 192.168.0.151
-    ▼
-Raspberry Pi 5
-    ├── nftables (stateful firewall, default DROP)
-    ├── Unbound (recursive DNS resolver — 127.0.0.1:5335)
-    ├── dnsmasq (DHCP + DNS forwarder — 192.168.200.1:53)
-    ├── NetBird wt0 (Zero-Trust VPN — P2P WireGuard)
-    │
-    └── wlx0013eff27090 — 192.168.200.1/24
-            │
-            ▼
-        Pi-IoT (WPA2-CCMP, ap_isolate)
-            ├── ESP32 sensors (192.168.200.x)
-            ├── EMS/NILM module (electrical panel)
-            └── [future IoT devices]
-```
 
 **Traffic policy:**
 - IoT → Internet: HTTPS (443), HTTP (80), NTP (123), ICMP only
