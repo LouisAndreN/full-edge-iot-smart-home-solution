@@ -1,0 +1,36 @@
+#!/bin/sh
+PREREQ=""
+prereqs()
+{
+    echo "$PREREQ"
+}
+case $1 in
+    prereqs)
+        prereqs
+        exit 0
+        ;;
+esac
+
+. /usr/share/initramfs-tools/hook-functions
+
+# Check keyfile exists
+if [ ! -f /boot/luks-keyfile ]; then
+    echo "WARNING: /boot/luks-keyfile not found!" >&2
+    echo "LUKS will require manual passphrase at boot!" >&2
+    exit 0  # Continue without error (fallback passphrase)
+fi
+
+# Copy keyfile to initramfs
+mkdir -p "${DESTDIR}/boot"
+cp /boot/luks-keyfile "${DESTDIR}/boot/"
+
+# Verify copy succeeded
+if [ ! -f "${DESTDIR}/boot/luks-keyfile" ]; then
+    echo "ERROR: Failed to copy LUKS keyfile to initramfs!" >&2
+    exit 1
+fi
+
+# Set permissions in initramfs
+chmod 400 "${DESTDIR}/boot/luks-keyfile"
+
+echo "LUKS keyfile added to initramfs" >&2
