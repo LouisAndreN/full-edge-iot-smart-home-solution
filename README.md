@@ -1,4 +1,4 @@
-# Raspberry Pi 5 Edge IoT built platform - End-to-end Smart Home Solution
+# Raspberry Pi 5 Edge IoT built platform - End-to-End Secure Smart Home Solution
 
 End-to-end edge IoT platform built on Raspberry Pi 5 — encrypted NVMe, isolated IoT network, local DNS, Zero-Trust VPN, ML inference, and smart home services.
 
