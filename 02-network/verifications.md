@@ -11,6 +11,8 @@
 | TP-Link（eth0） | PC | IoTサブネット | `ping 192.168.200.1` | ❌ timeout |
 | Pi上で実行 | Pi | - | `systemctl status hostapd` | ✅ EAPOL-4WAY-HS-COMPLETED |
 
+
+
 | テスト | 場所 | コマンド | 期待される結果 |
 |--------|------|---------|---------------|
 | Unbound動作確認 | Pi上 | `dig google.com @127.0.0.1 -p 5335` | ✅ NOERROR |
@@ -18,3 +20,17 @@
 | DNS漏洩なし | Pi上 | `ss -tulpn \| grep :53` | 0.0.0.0:53なし ✅ |
 | センサーのDNS解決 | Pi-IoTクライアント | `nslookup google.com` | ✅ 解決成功 |
 | インターネット接続 | Pi-IoTクライアント | `ping google.com` / `curl.exe -s https://ifconfig.me` | ✅ 応答あり |
+
+
+
+| テスト | 送信元 | 送信先 | 期待される結果 |
+|--------|--------|--------|---------------|
+| `netbird status` | Pi上 | - | ✅ Connected |
+| SSH via `wt0`| NetBirdピア | Pi | ✅ OK |
+| SSH via `eth0` | LAN | Pi | ✅ OK |
+| SSH via パブリックIP（NetBirdオフ） | スマートフォン（4G） | Pi | ❌ timeout |
+| SSH via `wt0`（NetBirdオン） | スマートフォン（4G） | Pi | ✅ OK |
+| HTTPS outbound | Pi-IoTクライアント | インターネット | ✅ OK |
+| ping 8.8.8.8 | Pi-IoTクライアント | インターネット | ✅ OK |
+| ping 192.168.0.1 | Pi-IoTクライアント | TP-Link | ❌ DROP |
+| SSH via `wlx0013eff27090` | Pi-IoTクライアント | Pi | ❌ DROP |
