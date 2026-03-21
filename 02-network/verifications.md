@@ -26,11 +26,11 @@
 | テスト | 送信元 | 送信先 | 期待される結果 |
 |--------|--------|--------|---------------|
 | `netbird status` | Pi上 | - | ✅ Connected |
-| SSH via `wt0`| NetBirdピア | Pi | ✅ OK |
-| SSH via `eth0` | LAN | Pi | ✅ OK |
-| SSH via パブリックIP（NetBirdオフ） | スマートフォン（4G） | Pi | ❌ timeout |
-| SSH via `wt0`（NetBirdオン） | スマートフォン（4G） | Pi | ✅ OK |
-| HTTPS outbound | Pi-IoTクライアント | インターネット | ✅ OK |
+| SSH経由 `wt0`| NetBirdピア | Pi | ✅ OK |
+| SSH経由 `eth0` | LAN | Pi | ✅ OK |
+| SSH経由 パブリックIP（NetBirdオフ） | スマートフォン（4G） | Pi | ❌ timeout |
+| SSH経由 `wt0`（NetBirdオン） | スマートフォン（4G） | Pi | ✅ OK |
+| HTTPSアウトバウンド | Pi-IoTクライアント | インターネット | ✅ OK |
 | ping 8.8.8.8 | Pi-IoTクライアント | インターネット | ✅ OK |
 | ping 192.168.0.1 | Pi-IoTクライアント | TP-Link | ❌ DROP |
-| SSH via `wlx0013eff27090` | Pi-IoTクライアント | Pi | ❌ DROP |
+| SSH経由 `wlx` | Pi-IoTクライアント | Pi | ❌ DROP |
