@@ -27,7 +27,7 @@ This project reproduces a production-grade cloud architecture locally on a singl
 ---
 
 ## Network Architecture
-<img width="1487" height="570" alt="image" src="https://github.com/user-attachments/assets/b0090771-e09d-445b-9592-cec10e717257" />
+<img width="1519" height="585" alt="image" src="https://github.com/user-attachments/assets/958c8d66-c4d9-4e7e-9b50-4b4c137ca1e4" />
 
 <img width="1137" height="639" alt="image" src="https://github.com/user-attachments/assets/6e8ba9da-54a9-43b4-a784-d45887db5260" />
 
