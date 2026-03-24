@@ -1,0 +1,15 @@
+# Monitoring network connections
+-a always,exit -F arch=b64 -S connect -k network_connect
+
+# Monitoring hostapd and dnsmasq
+-w /etc/hostapd/hostapd.conf -p wa -k hostapd_config
+-w /etc/dnsmasq.conf -p wa -k dnsmasq_config
+
+# Monitoring Netbird
+-w /etc/netbird/ -p rwa -k netbird_config
+
+# Monitoring Unbound
+-w /etc/unbound/ -p rwa -k unbound_config
+
+# Monitoring LUKS/LVM mounts
+-a always,exit -F arch=b64 -S mount -k mount_operations
