@@ -13,7 +13,7 @@ This project reproduces a production-grade cloud architecture locally on a singl
 | Internet Gateway | TP-Link Router |
 | VPC | Raspberry Pi 5 |
 | Public Subnet | eth0 (Wired LAN — 192.168.0.0/24) |
-| Private Subnet | wlx0013eff27090 (IoT Network — 192.168.200.0/24) |
+| Private Subnet | wlx0013eff27090 (IoT Network — 192.168.100.0/24) |
 | NAT Gateway | Raspberry Pi (nftables MASQUERADE / iptables) |
 | Security Group / NACL | nftables (stateful, strict egress) |
 | KMS / Encrypted EBS | LUKS2 + AES-XTS-512 + Argon2id on NVMe |
