@@ -4,10 +4,10 @@
 | Pi-IoT（wlx） | PC | Pi gateway | `ping 192.168.100.1` | ✅ OK |
 | Pi-IoT（wlx） | PC | インターネット | `ping 8.8.8.8` | ✅ OK（NAT） |
 | Pi-IoT（wlx） | PC | インターネット | `curl -s https://ifconfig.me` | ✅ TP-Link IP |
-| Pi-IoT（wlx） | PC | TP-Link | `ping 192.168.x.x` | ❌ DROP |
-| Pi-IoT（wlx） | PC | Pi eth0 | `ping 192.168.x.x` | ❌ DROP |
+| Pi-IoT（wlx） | PC | TP-Link | `ping <eth0_ip>` | ❌ DROP |
+| Pi-IoT（wlx） | PC | Pi eth0 | `ping <eth0_ip>` | ❌ DROP |
 | Pi-IoT（wlx） | PC + スマホ | 互いのIP | `ping 192.168.100.x` | ❌ DROP（ap_isolate） |
-| TP-Link（eth0） | PC | Pi | `ssh <user>@192.168.x.x` | ✅ OK |
+| TP-Link（eth0） | PC | Pi | `ssh <user>@<eth0_ip>` | ✅ OK |
 | TP-Link（eth0） | PC | IoTサブネット | `ping 192.168.100.1` | ❌ timeout |
 | Pi上で実行 | Pi | - | `systemctl status hostapd` | ✅ EAPOL-4WAY-HS-COMPLETED |
 
