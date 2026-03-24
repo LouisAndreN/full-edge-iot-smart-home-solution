@@ -1,0 +1,7 @@
+-w /etc/passwd -p wa -k identity
+-w /etc/shadow -p rwa -k identity
+-w /home/srvpi/.ssh/authorized_keys -p wa -k ssh-keys
+-w /etc/ssh/sshd_config -p wa -k ssh-config
+-a always,exit -F arch=b64 -S execve -F path=/usr/bin/sudo -k sudo-usage
+-w /etc/nftables.conf -p wa -k firewall-rules
+-w /etc/crowdsec/ -p rwa -k crowdsec-config
