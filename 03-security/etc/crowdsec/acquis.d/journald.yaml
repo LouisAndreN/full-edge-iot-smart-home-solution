@@ -1,0 +1,7 @@
+source: journalctl
+journalctl_filter:
+  - "_SYSTEMD_UNIT=ssh.service"
+  - "_SYSTEMD_UNIT=hostapd.service"
+  - "_SYSTEMD_UNIT=netbird.service"
+labels:
+  type: syslog
