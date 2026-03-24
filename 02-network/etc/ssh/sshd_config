@@ -2,7 +2,7 @@
 ListenAddress <wt0_ip>
 
 # LAN eth0 IP（VPNなしのローカルアクセス用）
-ListenAddress 192.168.0.151
+ListenAddress <eth0_ip>
 
 # パスワード認証を無効化（SSHキーのみ）
 PasswordAuthentication no
