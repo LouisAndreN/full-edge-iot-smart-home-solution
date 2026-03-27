@@ -102,6 +102,22 @@ echo ""
 echo "Disk usage:"
 df -h | grep -E '(Filesystem|nvme0n1|vg-main)'
 
+
+echo "=== InfluxDB & Grafana Check ==="
+echo "--------------------------------------------------"
+
+systemctl is-active --quiet influxdb && echo "✓ InfluxDB          : active" || echo "✗ InfluxDB          : failed"
+systemctl is-active --quiet grafana-server && echo "✓ Grafana           : active" || echo "✗ Grafana           : failed"
+
+curl -s http://localhost:8086/ping | grep -q "ready" && echo "✓ InfluxDB API      : OK" || echo "✗ InfluxDB API      : not ready"
+
+echo -e "\nInfluxDB Buckets :"
+influx bucket list --org iot-org --hide-headers
+
+echo -e "\nGrafana status   : http://$(hostname -I | awk '{print $1}'):3000"
+echo "=================================================="
+
+
 echo ""
 echo "All checks passed! NVMe boot successful."
 echo ""
