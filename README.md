@@ -4,6 +4,11 @@ End-to-end edge IoT platform built on Raspberry Pi 5 — encrypted NVMe, isolate
 
 ---
 
+## License
+- **Code**: [AGPL v3](LICENSE) — Commercial use requires written permission
+- **Docs & Diagrams**: [CC BY-NC-ND 4.0](LICENSE-DOCS.md)
+- Commercial licensing & collaboration: louisandre.nicolas@gmail.com
+
 ## Architecture Overview
 
 This project reproduces a production-grade cloud architecture locally on a single Raspberry Pi 5.
